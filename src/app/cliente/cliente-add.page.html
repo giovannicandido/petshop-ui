@@ -1,0 +1,11 @@
+ 
+  <ion-content style="padding: 40px">
+
+    <div>
+      <form [formGroup]="clientForm" (ngSubmit)="salvar()">
+        <ion-input formControlName="nome" placeholder="Nome" [errorText]="'Nome obrigatório'"></ion-input>
+        <ion-input formControlName="cpf" [errorText]="'Cpf obrigatório'" placeholder="CPF"></ion-input>
+        <ion-button type="submit">Salvar</ion-button>
+      </form>
+    </div>
+  </ion-content>
