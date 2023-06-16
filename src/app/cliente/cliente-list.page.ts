@@ -51,4 +51,11 @@ export class ClienteListPageComponent implements OnInit {
             this.list$ = this.service.listar()
         }
     }
+
+    deletar(cpf: string | null | undefined) {
+        this.service.deletar(cpf!)
+        .subscribe(() => {
+            this.list$ = this.service.listar()
+        })
+    }
 }

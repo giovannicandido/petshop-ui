@@ -21,7 +21,7 @@
     <ion-button (click)="abrirAdicionar()">Adicionar</ion-button>
     <ion-list>
       <ion-item *ngFor="let cliente of list$ | async">
-        CPF: {{cliente.cpf}} - {{cliente.nome}}
+        CPF: {{cliente.cpf}} - {{cliente.nome}} - <ion-button (click)="deletar(cliente.cpf)">Deletar</ion-button>
       </ion-item>
     </ion-list>
   </div>

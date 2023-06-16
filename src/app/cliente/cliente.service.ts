@@ -26,4 +26,8 @@ export class ClienteService {
     salvar(cliente: Cliente): Observable<Cliente> {
         return this.httpClient.post<Cliente>(`${environment.apiHost}/${API}`, cliente) 
     }
+
+    deletar(cpf: string) {
+        return this.httpClient.delete(`${environment.apiHost}/${API}/${cpf}`)
+    }
 }
